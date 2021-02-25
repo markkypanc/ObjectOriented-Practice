@@ -1,9 +1,12 @@
-//
-//  Lab_7_Problem_1.cpp
-//  CPP
-//
-//  Created by Mark Rachapoom on 23/2/21.
-//
+/*
+
+ ID: 63011283
+ Name: Rachapoom Phanchotong
+ Lab No: 7
+ Question No: 3
+ Date: February 23, 2021
+ 
+ */
 
 #include <iostream>
 #include <string>
@@ -93,7 +96,7 @@ public:
     static void printArea(Rectangle rectangle) {
         double width = rectangle.getWidth();
         double height = rectangle.getHeight();
-        cout << "Area of a rectangle with " << width << "width and " << height << " height is ";
+        cout << "Area of a rectangle with " << width << " width and " << height << " height is ";
         cout << width * height << endl;
     }
     
@@ -101,7 +104,7 @@ public:
         double base = triangle.getBase();
         double height = triangle.getHeight();
         double area = triangle.getArea();
-        cout << "Area of a triangle with " << base << "base length and " << height << " height is " << area << endl;
+        cout << "Area of a triangle with " << base << " base length and " << height << " height is " << area << endl;
     }
     
 };
@@ -129,7 +132,7 @@ int main(int argc, char* argv[]) {
             continue;
         }
         
-        cout << "The program has been terminated since the user chose to exit.\n";
+        cout << "The program has been terminated.\n";
         exit(0);
     }
 }
