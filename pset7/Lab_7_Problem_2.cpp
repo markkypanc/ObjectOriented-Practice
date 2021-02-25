@@ -3,7 +3,7 @@
  ID: 63011283
  Name: Rachapoom Phanchotong
  Lab No: 7
- Question No: 1&2
+ Question No: 2
  Date: February 23, 2021
  
  */
