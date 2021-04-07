@@ -181,6 +181,17 @@ istream& operator >> (istream &in, Matrix &matrix) {
     return in;
 }
 
+//MARK: - ERROR EXCEPTION CLASS
+
+class FatalError: public exception {
+private:
+    string error = "Matrix dimension mismatch for the operation";
+public:
+    string getFatalError() {
+        return this->error;
+    }
+};//: FATAL
+
 
 //MARK: - TO RUN
 
