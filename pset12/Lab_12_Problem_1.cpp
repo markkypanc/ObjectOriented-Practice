@@ -187,6 +187,14 @@ class FatalError: public exception {
 private:
     string error = "Matrix dimension mismatch for the operation";
 public:
+    //CON
+    FatalError() {
+        
+    }
+    
+    FatalError(string error) {
+        this->error = error;
+    }
     string getFatalError() {
         return this->error;
     }
@@ -225,12 +233,12 @@ int main(int argc, char* argv[]) {
         //MARK: - GUARD ERRORS
         try {
             if (decision == 1 and (numRowsA != numRowsB or numColumnsA != numColumnsB)) {
-                throw string("\nMatrix can not perform addition since the dimension are not matched...\n");
+                throw FatalError("\nMatrix can not perform addition since the dimension are not matched...\n");
             } else if (decision == 2 and (numRowsA != numColumnsB or numRowsB != numColumnsA)) {
-                throw string("\nMatrix can not perform multiplication since their rows and colums are not matched...");
+                throw FatalError("\nMatrix can not perform multiplication since their rows and colums are not matched...");
             }
-        } catch (string error) {
-            cout << error;
+        } catch (FatalError error) {
+            cout << error.getFatalError();
             continue;
         }//: FATALS
 
